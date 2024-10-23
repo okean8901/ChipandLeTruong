@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Tự Động Phát</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('thumb-1920-1163401.jpg'); /* Đường dẫn đến hình ảnh nền */
+            background-size: cover; /* Đặt hình ảnh đầy đủ */
+            background-position: center; /* Căn giữa hình ảnh */
+            background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+        }
+        .video-container {
+            width: 80%;
+            max-width: 800px;
+            border: 10px solid #444;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            position: relative;
+            transition: transform 0.3s;
+            background-color: rgba(255, 255, 255, 0.8); /* Nền trắng nhẹ cho khung video */
+        }
+        .video-container:hover {
+            transform: scale(1.05);
+        }
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .mute-button {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 10px 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.7s;
+        }
+        .mute-button:hover {
+            background-color: rgba(255, 255, 255, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video controls autoplay id="myVideo" src="lv_7360576423439944967_20241023091149.mp4"></video>
+    </div>
+</body>
+</html>
